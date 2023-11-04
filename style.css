@@ -1,0 +1,42 @@
+body {
+  background: linear-gradient(to left, #f082f2, #f6f288);
+  min-height: 100vh;
+  overflow: auto;
+}
+
+#container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#canvas {
+  border: 2px solid #333;
+}
+
+#controls {
+  margin-top: 10px;
+}
+
+.padding-lg {
+  display: block;
+  padding-top: 210px;
+  padding-bottom: 60px;
+}
+
+.width-auto {
+  width: auto;
+}
+
+.text-lg {
+  font-size: 2rem;
+}
+
+.carousel-indicators li {
+  border: none;
+  background: #ccc;
+}
+
+.carousel-indicators li.active {
+  background: #28a745;
+}

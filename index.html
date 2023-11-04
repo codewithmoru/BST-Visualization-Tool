@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BST Visualizer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <nav class="nav fixed-top navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid nav justify-content-center">
+      <a class="navbar-brand" href="#">BST Visualization Tools</a>
+    </div>
+  </nav>
+
+  <!-- Demo header-->
+  <section class="py-5 text-center">
+    <div class="container py-4 text-white">
+      <header>
+        <h1 class="display-4">BST Visualization Tools</h1>
+      </header>
+    </div>
+  </section>
+
+
+  <section class="pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 mx-auto">
+          <div class="p-5 bg-white shadow rounded">
+            <!-- Bootstrap carousel-->
+            <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+              <!-- Bootstrap carousel indicators [nav] -->
+              <ol class="carousel-indicators mb-0">
+                <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+
+
+              <!-- Bootstrap inner [slides]-->
+              <div class="carousel-inner px-5 pb-4">
+                <!-- Carousel slide-->
+                <div class="carousel-item active">
+                  <div class="media"><img class="rounded-circle img-thumbnail"
+                      src="https://cdn4.vectorstock.com/i/1000x1000/19/28/dsa-letter-logo-design-on-black-backgrounddsa-vector-41791928.jpg"
+                      alt="" width="75">
+                    <div class="media-body ml-3">
+                      <blockquote class="blockquote border-0 p-0">
+                        <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>A binary search
+                          tree follows some order to arrange the elements. In a Binary search tree,
+                          the value of left node must be smaller than the parent node, and the value of right node must
+                          be greater
+                          than the parent node. This rule is applied recursively to the left and right subtrees of the
+                          root..</p>
+                        
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Button trigger modal -->
+  <section class="text-center">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Start Visualizer
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Live Visualizer</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="container">
+              <h1>BST Visualizer</h1>
+              <canvas id="canvas" width="450" height="400"></canvas>
+              <div id="controls">
+                <input type="number" id="nodeValue" placeholder="Node Value">
+                <button onclick="insertNode()">Insert Node</button>
+                <button onclick="clearTree()">Clear Tree</button>
+                <label for="showEdges">Show Tree Edges</label>
+                <input type="checkbox" id="showEdges" checked>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="m-4">
+    <p style="background-color:powderblue; text-align:center">@ Er.Moreshwar Mahale<br>
+    </p>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
